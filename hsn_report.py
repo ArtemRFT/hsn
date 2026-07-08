@@ -249,6 +249,8 @@ def build_workbook(df_clean: pd.DataFrame, stats: dict, pivots: dict, title: str
         chart.title = col
         chart.x_axis.title = 'Значение'
         chart.y_axis.title = 'Кол-во'
+        chart.x_axis.delete = False
+        chart.y_axis.delete = False
         chart.style = 10
         data = Reference(ws_p, min_col=3, min_row=start_row, max_row=total_row - 1)
         cats = Reference(ws_p, min_col=2, min_row=start_row + 1, max_row=total_row - 1)
