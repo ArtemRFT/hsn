@@ -247,6 +247,7 @@ def build_workbook(df_clean: pd.DataFrame, stats: dict, pivots: dict, title: str
 
         chart = BarChart()
         chart.title = col
+        chart.x_axis.title = 'Значение'
         chart.y_axis.title = 'Кол-во'
         chart.style = 10
         data = Reference(ws_p, min_col=3, min_row=start_row, max_row=total_row - 1)
